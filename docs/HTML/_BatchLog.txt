@@ -1,0 +1,38 @@
+8/1/2015 11:45:54 AM	
+8/1/2015 11:45:54 AM	@-------- Start Batch Job ---------@
+8/1/2015 11:45:54 AM	
+8/1/2015 11:45:54 AM	Batch Log File: "C:\Users\vkartosh\Dropbox\Navigine\out\_BatchLog.txt"
+8/1/2015 11:45:54 AM	
+8/1/2015 11:45:54 AM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8/1/2015 11:45:54 AM	>>Processing list of batches - "C:\Users\vkartosh\Dropbox\Navigine\out\build_uncompressed.ini,BatchList"
+8/1/2015 11:45:54 AM	     > Read Batch list from "C:\Users\vkartosh\Dropbox\Navigine\out\build_uncompressed.ini", section "[BatchList]"
+8/1/2015 11:45:54 AM	     "build_uncompressed.ini,BuildSearch"
+8/1/2015 11:45:54 AM	     "build_uncompressed.ini,BuildHelp"
+8/1/2015 11:45:54 AM	
+8/1/2015 11:45:54 AM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8/1/2015 11:45:54 AM	>>Processing Batch job - "build_uncompressed.ini,BuildSearch"
+8/1/2015 11:45:54 AM	     Set Filter1-Skip Folders   = "(None)"
+8/1/2015 11:45:54 AM	     Set Filter2-Skip Files     = "(None)"
+8/1/2015 11:45:54 AM	     Set Filter3-Only Inc Files = "(None)"
+8/1/2015 11:45:54 AM	     Set Dir(C:\Users\vkartosh\Dropbox\Navigine\out), recursive = Y
+8/1/2015 11:45:54 AM	     Info: Files in file list = 62
+8/1/2015 11:45:54 AM	     FindStart = "", Empty command param => find and replace not enabled
+8/1/2015 11:45:54 AM	     >>Start BuildSearchData
+8/1/2015 11:45:54 AM	      > - JSSearch_Filename: searchdata.js
+8/1/2015 11:45:54 AM	      > - JSSearch_IgnoreLen: 0
+8/1/2015 11:45:54 AM	      > - JSSearch_BreakCJK: N
+8/1/2015 11:45:54 AM	      > - JSSearch_IgnoreNumsOnly: N
+8/1/2015 11:45:54 AM	      > - JSSearch_JSSearch_ExtraChars: (,)
+8/1/2015 11:45:54 AM	      > - JSSearch_StopWordFileList: 
+8/1/2015 11:45:54 AM	      > - JSSearch_CodePage: -1
+8/1/2015 11:45:55 AM	        Build JS Search: Finished. Time to complete: 1.34secs. Output file saved: C:\Users\vkartosh\Dropbox\Navigine\out\searchdata.js
+8/1/2015 11:45:55 AM	     >>End BuildSearchData
+8/1/2015 11:45:55 AM	
+8/1/2015 11:45:55 AM	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8/1/2015 11:45:55 AM	>>Processing Batch job - "build_uncompressed.ini,BuildHelp"
+8/1/2015 11:45:55 AM	     Info: ** No Files added! Using current file list ()...
+8/1/2015 11:45:55 AM	     Info: Files in file list = 62
+8/1/2015 11:45:56 AM	     >>Start MakeUncompHelp
+8/1/2015 11:45:56 AM	      > - Base Folder: C:\Users\vkartosh\Dropbox\Navigine\out
+8/1/2015 11:45:56 AM	      > - MakeUncompHelp_Section: Default
+8/1/2015 11:45:58 AM	     >>End MakeUncompHelp
