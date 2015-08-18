@@ -67,7 +67,7 @@ The Navigine's Indoor Location Services include:
 |                                | | vehicles and other assets on the building’s premises.      |
 | | Real time indoor             | | IT solutions using Navigine Tracking help to track         |
 | | tracking services            | | object's indoor movements in real time and optimize        |
-|                                | | logistics business processes.                             |
+|                                | | logistics business processes.                              |
 +--------------------------------+--------------------------------------------------------------+
 
  

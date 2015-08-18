@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Navigine Indore Location Services'
+project = u'Navigine Indoor Location Services'
 copyright = u'2015, Navigine'
 
 # The version info for the project you're documenting, acts as replacement for
