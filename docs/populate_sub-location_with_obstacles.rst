@@ -68,7 +68,7 @@ Click the drawn object's vertex with the Edit tool activated, and move the verte
 --------------
 
 Once you're done adding the obstacles, go to `Add
-Routes <add_routes.htm>`__.
+Routes <add_routes.html>`__.
 
  
 

@@ -5,7 +5,7 @@ Create Sub-locations
 
 In the forth step of getting started with the Navigine Indoor Location
 Services, you add sub-locations into the location(s) you've created
-earlier. Refer to `Create Sub-locations <create_sub-locations.htm>`__ if
+earlier. Refer to `Create Sub-locations <create_sub-locations.html>`__ if
 you need to create more locations.
 
 The following table provides steps for creating sub-locations using the
@@ -32,7 +32,7 @@ Once the ADD SUB-LOCATION dialog appears, specify:
 --------------
 
 Once you're done with adding sub-locations into your location(s), go to
-`Measure Sub-location Size <measure_sub-location_size.htm>`__.
+`Measure Sub-location Size <measure_sub-location_size.html>`__.
 
  
 

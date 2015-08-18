@@ -26,21 +26,21 @@ location's infrastructure.
 | Wi-Fi Routers (optional)   | | As an alternative to using BLE beacons for indoor navigation, you can use a set of Wi-Fi|
 |                            | | routers, which rather brings less accuracy and supports Android devices only.           |
 +----------------------------+-------------------------------------------------------------------------------------------+
-| Android Device             | | Which might be an Android smartphone or tablet with Bluetooth 4.0 onboard. Make sure    |
+| Android Device             | | Which might be an Android smartphone or tablet with Bluetooth 4.0. Make sure            |
 |                            | | that the device supports Bluetooth LE 4.0 and iBeacon protocol.                         |
 +----------------------------+-------------------------------------------------------------------------------------------+
 | Linux/Windows Machine      | | You also need a Linux or Windows OS machine for integrating the Navigine SDK into your  |
 |                            | | navigations app for Android devices.                                                    |
 +----------------------------+-------------------------------------------------------------------------------------------+
-| Mac                        | | To integrate the Navigine SDK into iOS apps, you definetely need a Mac OS machine and   |
-|                            | | the corresponding developer's acount.                                                   |
+| Mac                        | | To integrate the Navigine SDK into iOS apps, you definitely need a Mac OS machine and   |
+|                            | | the corresponding developer's account.                                                  |
 +----------------------------+-------------------------------------------------------------------------------------------+
 
 --------------
 
 Once you have all the components that are required for your specific
 infrastructure setup, go to `Step 2. Deploy the
-Infrastructure <step2.htm>`__, where you find information on setting up
+Infrastructure <step2.html>`__, where you find information on setting up
 the target location.
 
  

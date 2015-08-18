@@ -43,7 +43,7 @@ installation procedure:
    using 8-15 beacons per 1000 square meters.
 -  DO NOT put beacons behind metal objects and/or any other obstacles,
    otherwise the beacon's usefulness will be tending to zero.
--  Make sure the beacons are unaccessible so that they cannot be moved
+-  Make sure the beacons are inaccessible so that they cannot be moved
    by unauthorized people.
 
 The following figure demonstrates the optimal settlement of 18 beacons
@@ -60,7 +60,7 @@ infrastructure.
 --------------
 
 Once you have all infrastructure components deployed, go to `Step 3.
-Create the Map <Step_3._Create_the_Map.htm>`__.
+Create the Map <step3.html>`__.
 
  
 

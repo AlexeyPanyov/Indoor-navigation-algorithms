@@ -37,7 +37,7 @@ Click ADD once you've filled in the information, or click Cancel if you need to 
 --------------
 
 Once you are done with creating locations, go to `Create
-Sub-locations <create_sub-locations.htm>`__.
+Sub-locations <create_sub-locations.html>`__.
 
  
 

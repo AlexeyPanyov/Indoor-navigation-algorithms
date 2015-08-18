@@ -51,7 +51,7 @@ The Navigine's Indoor Location Services include:
 |                                | | advertisers may leverage additional marketing channel.     |
 |                                | | As for technology our marketing platform uses Bluetooth    |
 |                                | | Low Energy (Bluetooth 4.0) protocol. Requirements for      |
-|                                | | platform opeations are availability of Bluetooth 4.0 on    |
+|                                | | platform operations are availability of Bluetooth 4.0 on   |
 |                                | | mobile devices and installed Bluetooth beacons in zones    |
 |                                | | where push notifications are needed Functions of Navigine  |
 |                                | | Marketing are integrated into mobile applications using    |
@@ -66,8 +66,8 @@ The Navigine's Indoor Location Services include:
 | .. rubric:: NAVIGINE TRACKING  | | Allows building owners to track the motion of staff,       |
 |                                | | vehicles and other assets on the building’s premises.      |
 | | Real time indoor             | | IT solutions using Navigine Tracking help to track         |
-| | tracking services            | | objects’ indoor movements in real time and optimize        |
-|                                | | logistics’ business processes.                             |
+| | tracking services            | | object's indoor movements in real time and optimize        |
+|                                | | logistics business processes.                             |
 +--------------------------------+--------------------------------------------------------------+
 
  
