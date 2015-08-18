@@ -1,4 +1,4 @@
- 
+﻿ 
 
 Populate Sub-location with Obstacles
 ====================================
@@ -66,10 +66,10 @@ Routes <add_routes.htm>`__.
 
  
 
-.. |image0| image:: images/selecting-layers.png
-.. |image1| image:: images/barriers-button.png
-.. |image2| image:: images/add-barriers.png
-.. |image3| image:: images/add-walls.png
-.. |image4| image:: images/walls.png
-.. |image5| image:: images/edit-drawn.png
-.. |image6| image:: images/edit-drawn-action.png
+.. |image0| image:: _static/selecting-layers.png
+.. |image1| image:: _static/barriers-button.png
+.. |image2| image:: _static/add-barriers.png
+.. |image3| image:: _static/add-walls.png
+.. |image4| image:: _static/walls.png
+.. |image5| image:: _static/edit-drawn.png
+.. |image6| image:: _static/edit-drawn-action.png

@@ -1,16 +1,16 @@
-.. y documentation master file, created by
-   sphinx-quickstart on Tue Aug 18 11:59:44 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Navigine's documentation!
+Navigine Indoor Location Services - User Manual
 =============================
+
+.. figure:: _static/logo.png
+
+This Manual is designed as the first-use reference base for the new and
+returning users of the Navigine Services. Consider revising the Table of
+Contents to reach the information that is most to your current needs.
 
 Contents:
 
 .. toctree::
-
-	intro
+	
 	about
 	get_started
 

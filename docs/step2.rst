@@ -1,4 +1,4 @@
- 
+﻿ 
 
 Step 2. Deploy the Infrastructure
 =================================
@@ -64,4 +64,4 @@ Create the Map <Step_3._Create_the_Map.htm>`__.
 
  
 
-.. |image0| image:: images/beacons_setup.png
+.. |image0| image:: _static/beacons_setup.png

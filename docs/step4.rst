@@ -1,4 +1,4 @@
- 
+﻿ 
 
 Step 4. Measuring the Radiomap
 ==============================
@@ -39,4 +39,4 @@ Now you should be ready to test the your navigation system in demo mode.
 
  
 
-.. |image0| image:: images/navigine_apk_menu.png
+.. |image0| image:: _static/navigine_apk_menu.png

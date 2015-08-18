@@ -1,4 +1,4 @@
- 
+﻿ 
 
 Add Routes
 ==========
@@ -65,12 +65,12 @@ the Edit drawn routes, walls, and barriers tool.
 
  
 
-.. |image0| image:: images/selecting-layers.png
-.. |image1| image:: images/add_route.png
-.. |image2| image:: images/routes.png
-.. |image3| image:: images/no-active-tools.png
-.. |image4| image:: images/elevation_point.png
-.. |image5| image:: images/add-elevation.png
-.. |image6| image:: images/elevation_mode.png
-.. |image7| image:: images/edit-drawn.png
-.. |image8| image:: images/edit-drawn-action.png
+.. |image0| image:: _static/selecting-layers.png
+.. |image1| image:: _static/add_route.png
+.. |image2| image:: _static/routes.png
+.. |image3| image:: _static/no-active-tools.png
+.. |image4| image:: _static/elevation_point.png
+.. |image5| image:: _static/add-elevation.png
+.. |image6| image:: _static/elevation_mode.png
+.. |image7| image:: _static/edit-drawn.png
+.. |image8| image:: _static/edit-drawn-action.png
