@@ -1,5 +1,5 @@
 Navigine Indoor Location Services - User Manual
-===============================================
+================================================
 
 .. figure:: _static/logo.png
 
