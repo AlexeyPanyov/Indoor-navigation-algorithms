@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Populate Sub-location with Obstacles &mdash; Navigine Indoor Location Services  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="author" title="About these documents"
+              href="about.html"/>
+    <link rel="top" title="Navigine Indoor Location Services  documentation" href="index.html"/>
+        <link rel="up" title="Step 3. Create the Map" href="step3.html"/>
+        <link rel="next" title="Add Routes" href="add_routes.html"/>
+        <link rel="prev" title="Measure Sub-location Size" href="measure_sub-location_size.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Navigine Indoor Location Services
+        
+
+        
+        </a>
+
+        
+          
+          
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Navigine Indoor Location Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="get_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="step1.html">Step 1. Acquire the Infrastructure Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="step2.html">Step 2. Deploy the Infrastructure</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="step3.html">Step 3. Create the Map</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="create_location.html">Create Locations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="create_sub-locations.html">Create Sub-locations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="measure_sub-location_size.html">Measure Sub-location Size</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Populate Sub-location with Obstacles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-barriers-zones">Adding Barriers (Zones)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-walls">Adding Walls</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="add_routes.html">Add Routes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="step4.html">Step 4. Measuring the Radiomap</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Navigine Indoor Location Services</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="get_started.html">Getting Started</a> &raquo;</li>
+      
+          <li><a href="step3.html">Step 3. Create the Map</a> &raquo;</li>
+      
+    <li>Populate Sub-location with Obstacles</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="populate-sub-location-with-obstacles">
+<h1>Populate Sub-location with Obstacles<a class="headerlink" href="#populate-sub-location-with-obstacles" title="Permalink to this headline">¶</a></h1>
+<p>In the sixths step of the getting started with Navigine Indoor Location
+Services, you add map physical obstacles to the sub-location in the
+Navigine Content Management System (CMS). Measure the sub-location to
+make the obstacles drawing tools available.</p>
+<p>The Navigine CMS provides two obstacle drawing tools, which are Barriers
+and Walls. Make sure the corresponding layers are active in the Layers
+menu.</p>
+<p>You can choose the layers that you want to be available with the currently open sub-location. To do so,</p>
+<ol class="arabic simple">
+<li>Activate the Layers drop-down menu,</li>
+<li>Click the Blue Field next to a layer&#8217;s name. Blue background means that the layer is active, gray means that the layer is not active.</li>
+</ol>
+<p><img alt="image0" src="_images/selecting-layers.png" /></p>
+<div class="section" id="adding-barriers-zones">
+<h2>Adding Barriers (Zones)<a class="headerlink" href="#adding-barriers-zones" title="Permalink to this headline">¶</a></h2>
+<p>Barriers are the zones where a person can’t reach, for example: closed
+rooms, or areas outside the building. To add obstacles of such kind into
+your sub-location&#8217;s map, follow the guidelines in the table below.</p>
+<p>In the sub-location editing window, activate the Barriers tool.</p>
+<p><img alt="image1" src="_images/barriers-button.png" /></p>
+<p>Click the sub-location&#8217;s map to add vertices that demarcate the barriers. Once you add the last barrier vertex, either double-click the map, or click the first vertex to add the barrier&#8217;s closed contour to the map.</p>
+<p><img alt="image2" src="_images/add-barriers.png" /></p>
+</div>
+<div class="section" id="adding-walls">
+<h2>Adding Walls<a class="headerlink" href="#adding-walls" title="Permalink to this headline">¶</a></h2>
+<p>Setting walls is similar to setting the barriers. The only difference is
+that you need to separate the walls in the places where doorways should
+be. To add obstacles of such kind into your sub-location&#8217;s map, follow
+the guidelines in the table below.</p>
+<p>In the sub-location editing window, activate the Walls tool.</p>
+<p><img alt="image3" src="_images/add-walls.png" /></p>
+<p>Click the sub-location&#8217;s map to add vertices that demarcate the walls. Once you add the last wall vertex, either double-click the map, or click the first vertex to end the wall and add it to the map.</p>
+<p><img alt="image4" src="_images/walls.png" /></p>
+<p>At any moment of object creation in the sub-location&#8217;s map, you can use
+the Edit drawn routes, walls, and barriers tool.</p>
+<p>In the sub-location editing window, activate the Edit tool.</p>
+<p><img alt="image5" src="_images/edit-drawn.png" /></p>
+<p>Click the drawn object&#8217;s vertex with the Edit tool activated, and move the vertex to a new position.</p>
+<p><img alt="image6" src="_images/edit-drawn-action.png" /></p>
+<hr class="docutils" />
+<p>Once you&#8217;re done adding the obstacles, go to <a class="reference external" href="add_routes.html">Add
+Routes</a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="add_routes.html" class="btn btn-neutral float-right" title="Add Routes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="measure_sub-location_size.html" class="btn btn-neutral" title="Measure Sub-location Size" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Navigine.
+
+    </p>
+  </div>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

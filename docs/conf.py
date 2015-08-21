@@ -15,10 +15,14 @@
 import sys
 import os
 
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('_themes'))
+
+import sphinx_rtd_theme
+import sphinx_bootstrap_theme
 
 # -- General configuration ------------------------------------------------
 
@@ -56,7 +60,7 @@ copyright = u'2015, Navigine'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1'
+# version = '0.1'
 # The full version, including alpha/beta/rc tags.
 # release = 'n'
 
@@ -109,26 +113,33 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+
+# Bootstrap THEME html_theme = 'sphinx_bootstrap_theme'
+
+# Read The Docs THEME 
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+#html_theme_options = 
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+# RTD THEME 
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# Bootstrap THEME html_theme_path = [sphinx_bootstrap_theme.get_html_theme_path()]
+# html_theme_path = ["_themes", ]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = 'Navigine User Manual'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+# html_logo = logo.png
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -155,7 +166,7 @@ html_static_path = ['_static']
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
+   '**': ['globaltoc.html' , 'localtoc.html' , 'searchbox.html'],
    'using/windows': ['windowssidebar.html', 'searchbox.html'],
 }
 
@@ -173,7 +184,7 @@ html_sidebars = {
 #html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-#html_show_sourcelink = True
+html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #html_show_sphinx = True
@@ -204,7 +215,7 @@ html_sidebars = {
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ydoc'
+htmlhelp_basename = 'Navigine docs'
 
 # -- Options for LaTeX output ---------------------------------------------
 
