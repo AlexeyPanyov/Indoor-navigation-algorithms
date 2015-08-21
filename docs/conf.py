@@ -19,9 +19,9 @@ import os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('.'))
+# sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_navigine_theme
+# import sphinx_navigine_theme
 
 # -- General configuration ------------------------------------------------
 
@@ -116,7 +116,7 @@ pygments_style = 'sphinx'
 # Bootstrap THEME html_theme = 'sphinx_bootstrap_theme'
 
 # Read The Docs THEME 
-html_theme = 'sphinx_navigine_theme'
+# html_theme = 'sphinx_navigine_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -125,7 +125,7 @@ html_theme = 'sphinx_navigine_theme'
 
 # Add any paths that contain custom themes here, relative to this directory.
 # RTD THEME 
-html_theme_path = [sphinx_navigine_theme.get_html_theme_path()]
+# html_theme_path = [sphinx_navigine_theme.get_html_theme_path()]
 # Bootstrap THEME html_theme_path = [sphinx_bootstrap_theme.get_html_theme_path()]
 # html_theme_path = ["_themes", ]
 
@@ -150,7 +150,7 @@ html_short_title = 'Navigine User Manual'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_style = 'custom/css/my_theme.css' 
+html_style = 'css/my_theme.css' 
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
