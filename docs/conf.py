@@ -19,10 +19,9 @@ import os
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('_themes'))
+sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_rtd_theme
-import sphinx_bootstrap_theme
+import sphinx_navigine_theme
 
 # -- General configuration ------------------------------------------------
 
@@ -117,7 +116,7 @@ pygments_style = 'sphinx'
 # Bootstrap THEME html_theme = 'sphinx_bootstrap_theme'
 
 # Read The Docs THEME 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_navigine_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -126,7 +125,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom themes here, relative to this directory.
 # RTD THEME 
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [sphinx_navigine_theme.get_html_theme_path()]
 # Bootstrap THEME html_theme_path = [sphinx_bootstrap_theme.get_html_theme_path()]
 # html_theme_path = ["_themes", ]
 
