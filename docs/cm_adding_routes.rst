@@ -1,14 +1,9 @@
-﻿Adding Routes
-=============
+﻿Adding Paths
+============
 
-In the seventh step of the getting started with Navigine Indoor Location
-Services, you add routes to your sub-location's map. The Navigine SDK
-enables you to add routes from the current position to any reachable
-place in the map.
+Add paths to your sub-location's map. The Navigine SDK enables you to add paths from the current position to any reachable place in the map.
 
-The Navigine CMS provides two routing tools: Draw Route and Add
-Elevation Point to Route. Make sure that the Routes layer is active in
-the Layers menu.
+The Navigine CMS provides two path-finding tools: Draw Route and Add Elevation Point to Route. Make sure that the Routes layer is active in the Layers menu.
 
 You can choose the layers that you want to be available with the currently open sub-location. To do so,
 
@@ -33,7 +28,7 @@ Click the sub-location's map add vertices and demarcate the route. Once you add 
 |image2|
 
 Adding Elevations
-
+-----------------
 
 To connect routes of different sub-locations, you need to add
 elevations. The following table provides guidelines on using the Add

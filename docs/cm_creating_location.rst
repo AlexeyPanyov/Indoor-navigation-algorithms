@@ -1,10 +1,6 @@
 ﻿Creating Locations
 ==================
 
-In the third step of getting started with Navigine Indoor Location
-Services, you need to use the Navigine Content Management System (CMS)
-to create locations.
-
 Prior to measuring the map or filling it with objects, you need to set
 up the location in the Navigine CMS. See the following table for
 description of the steps on your way to creating a location.
@@ -34,8 +30,8 @@ Click ADD once you've filled in the information, or click Cancel if you need to 
 
 --------------
 
-Once you are done with creating locations, go to `Create
-Sub-locations <create_sub-locations.html>`__.
+Once you are done with creating locations, go to `Creating
+Sub-locations <cm_creating_sublocations.html>`__.
 
  
 

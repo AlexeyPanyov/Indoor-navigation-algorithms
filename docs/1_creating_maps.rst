@@ -1,7 +1,7 @@
 Creating Maps
 =============
 
-| The following sections describe how you can create maps for indoor navigation using the Navigine's CMS.
+The following sections describe how you can create maps for indoor navigation using the Navigine's CMS.
 
 .. toctree::
 

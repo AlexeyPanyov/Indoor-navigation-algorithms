@@ -1,9 +1,7 @@
 ﻿Measuring Sub-location Size
 ===========================
 
-In the fifths step of the getting started with Navigine Indoor Location
-Services, you measure a sub-location's size via the tools in the
-Navigine Content Management System (CMS).
+Measure a sub-location's size via the tools in the Navigine Content Management System (CMS).
 
 .. raw:: html
 
@@ -57,11 +55,8 @@ Click Save to save the measurement results and the set of layers you want to be 
 
 --------------
 
-Once you finish with the sub-locations size measurement, go to `Populate
-Sub-location with
-Obstacles <populate_sub-location_with_obstacles.html>`__.
+Once you finish with the sub-locations size measurement, go to `Adding Obstacles <cm_adding_obstacles.html>`__.
 
- 
 
 .. |image0| image:: _static/measure-sub-locations.png
 .. |image1| image:: _static/measure-sub-locations-tool.png
