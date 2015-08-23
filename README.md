@@ -10,15 +10,13 @@ This repository contains the following source codes:
 - demo applications for infrastructure development and testing
 - Navigine's public documentation
 
-[TOC]
-
 ##Algorithms
 
 The following sections describe the Navigine's algorithms, residing in this repository.
 
 ###Trilateration
 
-Trilateration algorithm implements a method of determing coordinates of a device using measurements of pseudo distances to all visible beacons or other signal transmitters such as Wi-Fi routers. 
+Trilateration algorithm implements a method of determining coordinates of a device using measurements of pseudo distances to all visible beacons or other signal transmitters such as Wi-Fi routers. 
 
 For navigation purposes you may also operate with RSSI readings. 
 

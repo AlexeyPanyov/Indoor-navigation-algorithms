@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Step 2. Deploy the Infrastructure &mdash; Navigine - User Manual  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Navigine - User Manual  documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Navigine - User Manual
+        
+
+        
+        </a>
+
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="1_about.html">About Navigine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_legal_information.html">Legal Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_get_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gs_setup_infrastructure.html">Set Up the Infrastructure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#ibeacon-approach">iBeacon Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#wi-fi-approach">Wi-Fi Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gs_create_map.html">Create the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gs_link_infrastructure.html">Link Infrastructure Components to the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gs_develop_app.html">Develop Indoor Navigation App</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_infrastructure_setup.html">Setting Up the Infrastructure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="is_ibeacon_configuration.html">Configuring iBeacons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="is_wifi_configuration.html">Configuring Wi-Fi Infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_creating_maps.html">Creating Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cm_creating_location.html">Creating Locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_creating_sublocations.html">Creating Sub-locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_measuring_sublocation.html">Measuring Sub-location Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_obstacles.html">Adding Obstacles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-barriers-zones">Adding Barriers (Zones)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-walls">Adding Walls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_routes.html">Adding Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_routes.html#id1">Adding Routes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_linking_infrastructure.html">Linking Infrastructure to the Map</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="li_using_trilateration.html">Using Trilateration Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="li_using_pedometer.html">Using Pedometer Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_developing_app.html">Developing the Navigation App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="da_using_android_sdk.html">Using Navigine SDK for Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="da_using_ios_sdk.html">Using Navigine SDK for iOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_cms.html">Using the Navigine CMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uc_home.html">Home Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_locations.html">Locations Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_marketing.html">Marketing Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_versions.html">Versions Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_analytics.html">CMS Analytics Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_logs.html">Logs Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_demos.html">Using Demo Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ud_android_demo.html">Using Demo App for Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ud_ios_demo.html">Using Demo App for iOS</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Navigine - User Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Step 2. Deploy the Infrastructure</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="step-2-deploy-the-infrastructure">
+<h1>Step 2. Deploy the Infrastructure<a class="headerlink" href="#step-2-deploy-the-infrastructure" title="Permalink to this headline">¶</a></h1>
+<p>In the second step of getting started with Navigine Indoor Location
+Services you prepare the target location for further measurement, which
+means you need to deploy the beacons (or Wi-Fi routers) in the target
+location.</p>
+<div class="section" id="ibeacon-approach-bluetooth">
+<h2>iBeacon Approach (Bluetooth)<a class="headerlink" href="#ibeacon-approach-bluetooth" title="Permalink to this headline">¶</a></h2>
+<div class="note"><p>Prior to installing the beacons, make sure that the beacons are in
+iBeacon mode and the signal transmit power is set to`` -4dbm``.</p>
+</div><p>For example, by default the Kontact.io beacons are set to travel mode
+and have minimal transmit power for power saving purposes. In the beacon
+transmit power options choose the 5th value, which corresponds to
+<code class="docutils literal"><span class="pre">-4dbm</span></code>.</p>
+<p>Also take into account the following golden rules during the beacon
+installation procedure:</p>
+<ul class="simple">
+<li>Use the beacons only in the areas where navigation is required.</li>
+<li>Install the beacons above the head level at the height between 2 and
+4 meters. The best practice is to fasten beacons on the ceiling.</li>
+<li>In the case when the recommended beacon installation place is
+unavailable (for example, the ceiling is too high), you can attach
+the beacons to the walls.</li>
+<li>Use 1 beacon for the locations smaller than 25 square meters.</li>
+<li>Place the beacons evenly across the location, still do not put them
+on the same direct line.</li>
+<li>The more beacons you use, the higher the accuracy level is. Consider
+using 8-15 beacons per 1000 square meters.</li>
+<li>DO NOT put beacons behind metal objects and/or any other obstacles,
+otherwise the beacon&#8217;s usefulness will be tending to zero.</li>
+<li>Make sure the beacons are inaccessible so that they cannot be moved
+by unauthorized people.</li>
+</ul>
+<p>The following figure demonstrates the optimal settlement of 18 beacons
+for a single facility with multiple rooms inside.</p>
+<p><img alt="image0" src="_images/beacons_setup.png" /></p>
+</div>
+<div class="section" id="wi-fi-router-approach">
+<h2>Wi-Fi Router Approach<a class="headerlink" href="#wi-fi-router-approach" title="Permalink to this headline">¶</a></h2>
+<p>&lt;TBD&gt; Here we provide detailed instructions for setting up the Wi-Fi
+infrastructure.</p>
+<hr class="docutils" />
+<p>Once you have all infrastructure components deployed, go to <a class="reference external" href="step3.html">Step 3.
+Create the Map</a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Navigine.
+
+    </p>
+  </div>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

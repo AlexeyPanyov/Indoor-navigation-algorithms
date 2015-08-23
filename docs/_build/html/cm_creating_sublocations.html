@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating Sub-locations &mdash; Navigine - User Manual  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Navigine - User Manual  documentation" href="index.html"/>
+        <link rel="up" title="Creating Maps" href="1_creating_maps.html"/>
+        <link rel="next" title="Measuring Sub-location Size" href="cm_measuring_sublocation.html"/>
+        <link rel="prev" title="Creating Locations" href="cm_creating_location.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Navigine - User Manual
+        
+
+        
+        </a>
+
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_about.html">About Navigine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_legal_information.html">Legal Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_get_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gs_setup_infrastructure.html">Set Up the Infrastructure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#ibeacon-approach">iBeacon Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#wi-fi-approach">Wi-Fi Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gs_create_map.html">Create the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gs_link_infrastructure.html">Link Infrastructure Components to the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gs_develop_app.html">Develop Indoor Navigation App</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_infrastructure_setup.html">Setting Up the Infrastructure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="is_ibeacon_configuration.html">Configuring iBeacons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="is_wifi_configuration.html">Configuring Wi-Fi Infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="1_creating_maps.html">Creating Maps</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cm_creating_location.html">Creating Locations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Creating Sub-locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_measuring_sublocation.html">Measuring Sub-location Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_obstacles.html">Adding Obstacles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-barriers-zones">Adding Barriers (Zones)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-walls">Adding Walls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_routes.html">Adding Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_routes.html#id1">Adding Routes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_linking_infrastructure.html">Linking Infrastructure to the Map</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="li_using_trilateration.html">Using Trilateration Algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="li_using_pedometer.html">Using Pedometer Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_developing_app.html">Developing the Navigation App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="da_using_android_sdk.html">Using Navigine SDK for Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="da_using_ios_sdk.html">Using Navigine SDK for iOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_cms.html">Using the Navigine CMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uc_home.html">Home Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_locations.html">Locations Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_marketing.html">Marketing Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_versions.html">Versions Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_analytics.html">CMS Analytics Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_logs.html">Logs Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_demos.html">Using Demo Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ud_android_demo.html">Using Demo App for Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ud_ios_demo.html">Using Demo App for iOS</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Navigine - User Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="1_creating_maps.html">Creating Maps</a> &raquo;</li>
+      
+    <li>Creating Sub-locations</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-sub-locations">
+<h1>Creating Sub-locations<a class="headerlink" href="#creating-sub-locations" title="Permalink to this headline">¶</a></h1>
+<p>In the forth step of getting started with the Navigine Indoor Location
+Services, you add sub-locations into the location(s) you&#8217;ve created
+earlier. Refer to <a class="reference external" href="create_sub-locations.html">Create Sub-locations</a> if
+you need to create more locations.</p>
+<p>The following table provides steps for creating sub-locations using the
+Navigine Content Management System (CMS).</p>
+<p>In the <a class="reference external" href="http://client.navigine.com/maps">Locations</a> tab, click the location&#8217;s name in the list of locations, then click Add Sub-locations.</p>
+<p><img alt="image0" src="_images/master-and-sub-locations.png" /></p>
+<p>Once the ADD SUB-LOCATION dialog appears, specify:</p>
+<p><img alt="image2" src="_images/add_sublocation_dialog.png" /></p>
+<ul>
+<li><p class="first">Title - sub-location&#8217;s name of your choice</p>
+</li>
+<li><p class="first">Latitude and Longitude (optional) - corresponding to bottom left corner of the picture you added, OR</p>
+</li>
+<li><p class="first">If the latitude and longitude values are unknown, check the I don&#8217;t know the latitude and longitude check box</p>
+</li>
+<li><p class="first">Azimuth angle - the angle between the North and the direction corresponding to the vertical axis of the picture you&#8217;ve attached. The angle is measured in degrees clockwise from the North direction.
+If the value is unknown, specify 0. You can edit the value later with the Edit sub-location button.</p>
+<p><img alt="image1" src="_images/edit-sub-location.png" /></p>
+</li>
+<li><p class="first">Add picture button - enables you to add the sub-location&#8217;s image for further reference. Consider using the location&#8217;s (building&#8217;s) original blueprints to simplify the subsequent map creation process. Only PNG and SVG image formats are supported.</p>
+</li>
+</ul>
+<hr class="docutils" />
+<p>Once you&#8217;re done with adding sub-locations into your location(s), go to
+<a class="reference external" href="measure_sub-location_size.html">Measure Sub-location Size</a>.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cm_measuring_sublocation.html" class="btn btn-neutral float-right" title="Measuring Sub-location Size" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cm_creating_location.html" class="btn btn-neutral" title="Creating Locations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Navigine.
+
+    </p>
+  </div>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
