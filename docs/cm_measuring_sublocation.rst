@@ -19,39 +19,27 @@ The following table provides information on how you can measure a
 sub-location's size with the Navigine CMS. Perform these actions on each
 of the sub-locations you create.
 
-In the `Locations <http://client.navigine.com/maps>`__ tab, click the name of the target location and then click the name of the target sub-location.
+#. In the `Locations <http://client.navigine.com/maps>`__ tab, click the name of the target location and then click the name of the target sub-location.
 
-|image0|
+	* |image0|
 
-In the main window, click the Measure Current Sub-location tool's image to active the measuring tool.
+#. In the main window, click the **Measure Current Sub-location** tool's image to active the measuring tool.
 
-|image1|
+	* |image1|
 
-Now add two markers into the picture to measure the distance between them.
+#. Now add two markers into the picture to measure the distance between them.
 
-|image2|
+	* |image2|
 
-Right after you add the second marker, the SET LINE LENGH dialog appears.
+#. Right after you add the second marker, the **SET LINE LENGH** dialog appears.
 
-|image3|
+	* |image3|
 
-Specify the distance between the two spots into the Width (m) text box.
+#. Specify the distance between the two spots into the **Width (m)** text box. The **Start** and the **End** values display the vertical/horizontal positions of the markers you've just added. With this step you actually align the physical scale of your location with the scale of the image.
 
-The Start and the End values display the vertical/horizontal positions of the markers you've just added.
+#. Click **Save** to save the measurement results and the set of layers you want to be available later.
 
-With this step you actually align the physical scale of your location with the scale of the image.
-
-You can choose the layers that you want to be available with the currently open sub-location. To do so,
-
-#. Activate the Layers drop-down menu,
-#. Click the Blue Field next to a layer's name. Blue background means that the layer is active, gray means that the layer is not active.
-
-|image4|
-
-Click Save to save the measurement results and the set of layers you want to be available later.
-
-|image5|
-
+	* |image4|
 
 --------------
 
@@ -62,5 +50,4 @@ Once you finish with the sub-locations size measurement, go to `Adding Obstacles
 .. |image1| image:: _static/measure-sub-locations-tool.png
 .. |image2| image:: _static/add-markers-to-measure.png
 .. |image3| image:: _static/SET-LINE-LENGH.png
-.. |image4| image:: _static/selecting-layers.png
-.. |image5| image:: _static/save_button.png
+.. |image4| image:: _static/save_button.png

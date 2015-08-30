@@ -3,11 +3,7 @@ Setting Up iBeacon Infrastructure
 
 The following section provides guidelines on setting up the iBeacon infrastructure for your indoor navigation app.
 
-Configuring Beacons
--------------------
-
-Prior to installing beacons in the target locations, you need to configure them. Use the Navigine's and Kontact.io applications for beacon configuration.
-The applications are available at <TBD>
+Prior to installing beacons in the target locations, you need to configure them. Use the NavigineSetting or kontact.io application for beacon configuration.
 
 .. raw:: html
 
@@ -19,7 +15,44 @@ Make sure that the beacons are in iBeacon mode and the signal transmit power is 
 
    </div>
 
-By default the Kontact.io beacons are set to travel mode and have minimal transmit power for power saving purposes. In the beacon transmit power options choose the 5th value, which corresponds to ``-4dbm``.
+By default the kontact.io beacons are set to travel mode and have minimal transmit power for power saving purposes. In the beacon transmit power options choose the 5th value, which corresponds to ``-4dbm``.
+
+Configuring with NavigineSetting
+--------------------------------
+
+One way to configure the beacons is via the NavigineSetting application on iOS devices. Consider using this approach in case you want to configure multiple beacons at once.
+
+#. Launch the NavigineSetting app on your iOS device.
+#. In the first screen of the applications, specify the following parameters:
+	
+	* **TxPower** - specify the power of a beacon's transmit signal. Values: from 1 to 7, where 1 corresponds to 5 meters, and 7 - to 70 meters. The higher the specified value is, the more power consumes the beacon.
+	* **AdvertisingInterval** - set up the periodicity of a beacon's advertising package transmission. Values: from 20 ms to 1000 ms.
+	* **Api Key** - specify Api Key for your iBeacons. The Key is available in your account at `http://panel.kontakt.io <http://panel.kontakt.io>`__. Take into account that if you specify an incorrect Api Key, the application locks beacons for 20 minutes.
+
+#. Tap **CONFIGURE** to see the list of beacons that are visible or already prepared.
+#. Tap **START** to run the automatic configuration procedure with the settings specified. You should see log in the console under the list of beacons. In case of failure, try again via tapping the **START** button again. Make sure no beacons are locked for configuration.
+
+Consider configuring no more than 20 beacons at once.
+
+Configuring with kontakt.io
+---------------------------
+
+One more way to configure your iBbeacons is via the kontakt.io application. Consider this approach if you want to configure beacons' advanced settings. This approach let's you configure each your beacons one-by-one.
+
+With this approach you need Internet connection.
+
+#. Launch the kontakt.io app on your iOS device.
+#. Switch to the **Settings** tab and enter your kontakt.io login information.
+#. In the **Settings** tab, scroll down to the **Administrator** section, and tap **Enter administrator mode**.
+#. In the **Beacons** tab, find the ID of the beacon that you want configure, and tap it to connect. Beacon's ID is written on it's back.
+#. Specify the following parameters for each of the beacons you need to configure:
+
+	* **Proximity UUID** - the kontakt.io beacon identifier
+	* **major** - beacon major identifier
+	* **minor** - beacon minor identifier
+	* **TxPower** - power of a beacon's transmit signal. Values: from 1 to 7, where 1 corresponds to 5 meters, and 7 - to 70 meters. The higher the specified value is, the more power consumes the beacon.
+	* **Advertising Time Interval** - periodicity of a beacon's advertising package transmission. Values: from 20 ms to 1000 ms.
+	* **Model Name** - beacon identifier as bluetooth device.
 
 Deploying Beacons
 -----------------
@@ -49,4 +82,5 @@ for a single facility with multiple rooms inside.
 |image0|
 
 .. |image0| image:: _static/beacons_setup.png
+.. |image1| image:: _static/
 

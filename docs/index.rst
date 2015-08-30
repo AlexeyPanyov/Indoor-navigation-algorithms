@@ -10,7 +10,6 @@ Contents to reach the information that is most to your current needs.
 Contents:
 
 .. toctree::
-
 	
 	1_about
 	1_legal_information
