@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Measuring Radiomap &mdash; Navigine - User Manual  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Navigine - User Manual  documentation" href="index.html"/>
+        <link rel="up" title="Linking Infrastructure to the Map" href="1_linking_infrastructure.html"/>
+        <link rel="next" title="Developing the Navigation App" href="1_developing_app.html"/>
+        <link rel="prev" title="Using Trilateration" href="li_using_trilateration.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Navigine - User Manual
+        
+
+        
+        </a>
+
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_about.html">About Navigine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_legal_information.html">Legal Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_get_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gs_setup_infrastructure.html">Set Up the Infrastructure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#ibeacon-approach">iBeacon Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#wi-fi-approach">Wi-Fi Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gs_create_map.html">Create the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gs_link_infrastructure.html">Link Infrastructure Components to the Map</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_link_infrastructure.html#trilateration-algorithm">Trilateration Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_link_infrastructure.html#pedometer-algorithm-radiomap-measurement">Pedometer Algorithm (Radiomap Measurement)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gs_develop_app.html">Develop Indoor Navigation App</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_develop_app.html#sdk-for-android">SDK for Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_develop_app.html#sdk-for-ios">SDK for iOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_infrastructure_setup.html">Setting Up the Infrastructure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="is_ibeacon_configuration.html">Setting Up iBeacon Infrastructure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="is_ibeacon_configuration.html#configuring-with-naviginesetting">Configuring with NavigineSetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="is_ibeacon_configuration.html#configuring-with-kontakt-io">Configuring with kontakt.io</a></li>
+<li class="toctree-l3"><a class="reference internal" href="is_ibeacon_configuration.html#deploying-beacons">Deploying Beacons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="is_wifi_configuration.html">Configuring Wi-Fi Infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_creating_maps.html">Creating Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cm_creating_location.html">Creating Locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_creating_sublocations.html">Creating Sub-locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_measuring_sublocation.html">Measuring Sub-location Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_obstacles.html">Adding Obstacles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-barriers-zones">Adding Barriers (Zones)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-walls">Adding Walls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_routes.html">Adding Paths</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_routes.html#adding-routes">Adding Routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_routes.html#adding-elevations">Adding Elevations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="1_linking_infrastructure.html">Linking Infrastructure to the Map</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="li_using_trilateration.html">Using Trilateration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Measuring Radiomap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-demo-app">Installing the Demo App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-the-map">Installing the Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring-the-radio-map">Measuring the Radio Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measurement-recommendations">Measurement Recommendations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_developing_app.html">Developing the Navigation App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="da_using_android_sdk.html">Using Navigine SDK for Android</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-navigationthread">Class NavigationThread</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-terminate">Function Terminate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-idle">Function Idle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-work">Function Work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getdevicelist">Function getDeviceList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-geterrorcode">Function getErrorCode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#functions-getfrequency-setfrequency">Functions getFrequency/setFrequency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-loadarchive">Function loadArchive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getarchivepath">Function getArchivePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocation">Function getLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-makeroute">Function makeRoute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#usage-example">Usage Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-locationloader">Class LocationLoader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocationdir">Function getLocationDir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocationfile">Function getLocationFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocalversion">Function getLocalVersion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#function-startlocationloader">Function startLocationLoader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-checklocationloader">Function checkLocationLoader</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#function-stoplocationloader">Function stopLocationLoader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-startlocationuploader">Function startLocationUploader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-checklocationuploader">Function checkLocationUploader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-stoplocationuploader">Function stopLocationUploader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id1">Usage Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-location">Class Location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#public-fields">Public fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#constructors">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getsublocation">Function getSubLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id2">Public Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id3">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getsvgimage">Function getSvgImage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getpngimage">Function getPngImage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getjpgimage">Function getJpgImage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getpicture">Function getPicture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getbitmap">Function getBitmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getgpscoordinates">Function getGpsCoordinates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-deviceinfo">Class DeviceInfo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id4">Public Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id5">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-locationpoint">Class LocationPoint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id6">Public Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id7">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#push-notifications">Push Notifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#androidmanifest">AndroidManifest</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="da_using_ios_sdk.html">Using Navigine SDK for iOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="da_using_ios_sdk.html#structure-initialization">Structure Initialization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#before-you-begin">Before You Begin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#default-settings">Default Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#custom-settings">Custom Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_ios_sdk.html#navigation">Navigation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#structure-navigationresults">Structure NavigationResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-downloadcontent-location-forcereload-successblock-failblock">Function downloadContent: location: forceReload:successBlock:failBlock:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-startnavigine">Function startNavigine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-stopnavigine">Function stopNavigine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-startlocationloader">Function startLocationLoader:::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-hecklocationloader">Function сheckLocationLoader:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-stoplocationloader">Function stopLocationLoader:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-loadarchive">Function loadArchive:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-getnavigationresults">Function getNavigationResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-localtogps">Function localToGps::::::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#example-of-usage">Example of Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_ios_sdk.html#making-route">Making Route</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#class-vertex">Class Vertex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-makeroute">Function makeRoute::::::</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_ios_sdk.html#location">Location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-getlocationid">Function getLocationId:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-getsublocdictionary">Function getSublocDictionary:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-getcurrentversion">Function getCurrentVersion:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_ios_sdk.html#images">Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-getsvgimagebyindex-getpngimagebyindex">Function getSVGImageByIndex:: / getPNGImageByIndex::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#functions-getsvgimagebyid-getpngimagebyid">Function’s getSVGImageById:: / getPNGImageById::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#functions-getwidthandheight-byindex">Function’s getWidthAndHeight:ByIndex:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#functions-getwidthandheight-byid">Function’s getWidthAndHeight:ById:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_ios_sdk.html#pushes-venues">Pushes &amp; Venues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#class-push">Class Push</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#class-venues">Class Venues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#protocol-naviginecoredelegate">Protocol NavigineCoreDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-startrangepushes">Function startRangePushes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-didrangepushwithtitle-content-image">Function didRangePushWithTitle: Content: Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-didrangepushwithtitle-content-image-id">Function didRangePushWithTitle: Content: Image: Id:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-startrangevenues">Function startRangeVenues:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-didrangevenues">Function didRangeVenues:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_ios_sdk.html#background-navigation">Background Navigation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#before-starting">Before Starting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_ios_sdk.html#function-navigationresultsinbackground">Function navigationResultsInBackground</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_cms.html">Using the Navigine CMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uc_home.html">Home Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_locations.html">Locations Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="uc_locations.html#layers">Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uc_locations.html#editing-tool">Editing Tool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="uc_marketing.html">Marketing Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_versions.html">Versions Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_analytics.html">CMS Analytics Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_logs.html">Logs Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_demos.html">Using Demo Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ud_android_demo.html">Using Demo App for Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ud_ios_demo.html">Using Demo App for iOS</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Navigine - User Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="1_linking_infrastructure.html">Linking Infrastructure to the Map</a> &raquo;</li>
+      
+    <li>Measuring Radiomap</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="measuring-radiomap">
+<h1>Measuring Radiomap<a class="headerlink" href="#measuring-radiomap" title="Permalink to this headline">¶</a></h1>
+<p>The Radiomap Measurement approach is actually measuring the target location&#8217;s radiomap on foot via an Android device with the Navigine&#8217;s Demo app installed.</p>
+<p>By this moment you should have <a class="reference external" href="gs_setup_infrastructure.html">infrastructure deployed</a> and <a class="reference external" href="gs_create_map.html">maps (locations) implemented</a>,.</p>
+<div class="section" id="installing-the-demo-app">
+<h2>Installing the Demo App<a class="headerlink" href="#installing-the-demo-app" title="Permalink to this headline">¶</a></h2>
+<p>You need the Android Demo App installed on your Android device first. To get it,</p>
+<ol class="arabic simple">
+<li>Install the Navigine&#8217;s Demo App for Android from <a class="reference external" href="https://github.com/Navigine/Android-SDK/tree/master/Navigine">GitHub repository</a>. You can also the app sources there to build it yourself.</li>
+<li>Switch on the Android device&#8217;s Wi-Fi and Bluetooth modules.</li>
+</ol>
+</div>
+<div class="section" id="installing-the-map">
+<h2>Installing the Map<a class="headerlink" href="#installing-the-map" title="Permalink to this headline">¶</a></h2>
+<p>Prior to measuring the radio map, you need to download and install the map you&#8217;ve <a class="reference external" href="gs_create_map.html">created in the Navigine&#8217;s CMS beforehand</a>.</p>
+<ol class="arabic">
+<li><p class="first">Run the Demo App.</p>
+</li>
+<li><p class="first">Tab on the <strong>Measuring mode</strong>.</p>
+<blockquote>
+<div><p><a class="reference internal" href="_images/android_app_measuring_mode.png"><img alt="image0" src="_images/android_app_measuring_mode.png" style="width: 218.5px; height: 56.0px;" /></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Select <strong>Load Content</strong>.</p>
+<blockquote>
+<div><p><a class="reference internal" href="_images/android_app_content.png"><img alt="image3" src="_images/android_app_content.png" style="width: 270.0px; height: 113.5px;" /></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">In the <strong>Load Content</strong> dialog, put checkmark next to <strong>Forced load</strong>, enter name of your <a class="reference external" href="cm_creating_location.html">location</a>,and wait for the download to complete.</p>
+<blockquote>
+<div><p><a class="reference internal" href="_images/android_app_forced.png"><img alt="image2" src="_images/android_app_forced.png" style="width: 273.0px; height: 261.0px;" /></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Go back to the <strong>Settings</strong> menu and select <strong>Load map</strong>.</p>
+<blockquote>
+<div><p><a class="reference internal" href="_images/android_app_map.png"><img alt="image1" src="_images/android_app_map.png" style="width: 270.5px; height: 112.0px;" /></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">After your file manager opens, find the folder with your location&#8217;s name, and open the map ZIP archive. Your location&#8217;s map should appear.</p>
+<blockquote>
+<div><p><a class="reference internal" href="_images/android_app_map_loaded.png"><img alt="image5" src="_images/android_app_map_loaded.png" style="width: 271.0px; height: 480.5px;" /></a></p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="measuring-the-radio-map">
+<h2>Measuring the Radio Map<a class="headerlink" href="#measuring-the-radio-map" title="Permalink to this headline">¶</a></h2>
+<p>To measure the radio map of the target location, you need to do the following:</p>
+<ol class="arabic">
+<li><p class="first">In the Demo App, specify your current physical location via the aim mark symbol on the map.</p>
+<blockquote>
+<div><p><a class="reference internal" href="_images/android_app_aim_mark.png"><img alt="image6" src="_images/android_app_aim_mark.png" style="width: 229.0px; height: 117.0px;" /></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Tap the <strong>Function</strong> button, and tab <strong>Create point</strong>. In the <strong>Set measuring object</strong> dialog tap <strong>Ok</strong>.</p>
+<blockquote>
+<div><p><a class="reference internal" href="_images/android_app_set_object.png"><img alt="image7" src="_images/android_app_set_object.png" style="width: 261.5px; height: 245.0px;" /></a></p>
+</div></blockquote>
+</li>
+<li><p class="first">Wait for the % indicator in the top part of the screen to reach 100% for the currently measured reference point, which should take around one minute.</p>
+</li>
+<li><p class="first">Repeat the measurement process until you create enough reference points.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="measurement-recommendations">
+<h2>Measurement Recommendations<a class="headerlink" href="#measurement-recommendations" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Map measurement process is indicated in percentage in the upper part of the Android device&#8217;s screen. 100% means that the application gathered enough information for effective navigation. Normally the process takes about one minute.</p>
+</li>
+<li><p class="first">In the case when radiomap measurement process takes longer than one minute (you see that the % indicator got stuck), do the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Check your devices Wi-Fi and Bluetooth modules&#8217; status</li>
+<li>If the modules are active, go back to the <strong>Main menu</strong>, select <strong>Navigation mode</strong>, push the <strong>Function</strong> button, and tap on <strong>Console</strong> to see the list of the currently available Wi-Fi and Bluetooth emitters. In the case when the amount of emitters is too low, consider increasing the power of the existing beacon’s transmit signal, or add more emitters into the infrastructure.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">In the case when the gathered radiodata is broken or incomplete, consider re-gathering. Prior to gathering the data once again, remove the existing reference point via tapping its red crest symbol in the map and then tapping <strong>Delete</strong>.</p>
+</li>
+<li><p class="first">If the current master location contains more than one sub-locations, you have to measure radiomaps of all sub-locations, otherwise navigation will not work.</p>
+</li>
+</ul>
+<p>Also consider the following &#8220;golder rules&#8221; when measuring radiomaps:</p>
+<ul class="simple">
+<li>Reference points should cover the target location evenly.</li>
+<li>Add some points near the location&#8217;s borders and passageways, which should help the application to determine the location&#8217;s geometry and increase navigation accuracy.</li>
+<li>Do not change the device&#8217;s position, as it might distort the radiomap and decrease the navigation accuracy.</li>
+<li>Also consider turning away from the nearby walls to avoid the gathered information distortion.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="1_developing_app.html" class="btn btn-neutral float-right" title="Developing the Navigation App" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="li_using_trilateration.html" class="btn btn-neutral" title="Using Trilateration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Navigine.
+
+    </p>
+  </div>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

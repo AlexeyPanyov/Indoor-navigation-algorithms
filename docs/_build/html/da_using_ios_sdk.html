@@ -1,0 +1,921 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using Navigine SDK for iOS &mdash; Navigine - User Manual  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/my_theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Navigine - User Manual  documentation" href="index.html"/>
+        <link rel="up" title="Developing the Navigation App" href="1_developing_app.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="da_sdk_error_codes.html"/>
+        <link rel="prev" title="Using Navigine SDK for Android" href="da_using_android_sdk.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> Navigine - User Manual
+        
+
+        
+        </a>
+
+        
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_about.html">About Navigine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_legal_information.html">Legal Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_get_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gs_setup_infrastructure.html">Set Up the Infrastructure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#ibeacon-approach">iBeacon Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_setup_infrastructure.html#wi-fi-approach">Wi-Fi Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gs_create_map.html">Create the Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gs_link_infrastructure.html">Link Infrastructure Components to the Map</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_link_infrastructure.html#trilateration-algorithm">Trilateration Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_link_infrastructure.html#pedometer-algorithm-radiomap-measurement">Pedometer Algorithm (Radiomap Measurement)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gs_develop_app.html">Develop Indoor Navigation App</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gs_develop_app.html#sdk-for-android">SDK for Android</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gs_develop_app.html#sdk-for-ios">SDK for iOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_infrastructure_setup.html">Setting Up the Infrastructure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="is_ibeacon_configuration.html">Setting Up iBeacon Infrastructure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="is_ibeacon_configuration.html#configuring-with-naviginesetting">Configuring with NavigineSetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="is_ibeacon_configuration.html#configuring-with-kontakt-io">Configuring with kontakt.io</a></li>
+<li class="toctree-l3"><a class="reference internal" href="is_ibeacon_configuration.html#deploying-beacons">Deploying Beacons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="is_wifi_configuration.html">Configuring Wi-Fi Infrastructure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_creating_maps.html">Creating Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cm_creating_location.html">Creating Locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_creating_sublocations.html">Creating Sub-locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_measuring_sublocation.html">Measuring Sub-location Size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_obstacles.html">Adding Obstacles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-barriers-zones">Adding Barriers (Zones)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_obstacles.html#adding-walls">Adding Walls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cm_adding_routes.html">Adding Paths</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_routes.html#adding-routes">Adding Routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cm_adding_routes.html#adding-elevations">Adding Elevations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_linking_infrastructure.html">Linking Infrastructure to the Map</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="li_using_trilateration.html">Using Trilateration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="li_measuring_radiomap.html">Measuring Radiomap</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="li_measuring_radiomap.html#installing-the-demo-app">Installing the Demo App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="li_measuring_radiomap.html#installing-the-map">Installing the Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="li_measuring_radiomap.html#measuring-the-radio-map">Measuring the Radio Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="li_measuring_radiomap.html#measurement-recommendations">Measurement Recommendations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="1_developing_app.html">Developing the Navigation App</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="da_using_android_sdk.html">Using Navigine SDK for Android</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-navigationthread">Class NavigationThread</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#constructor">Constructor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-terminate">Function Terminate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-idle">Function Idle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-work">Function Work</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getdevicelist">Function getDeviceList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-geterrorcode">Function getErrorCode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#functions-getfrequency-setfrequency">Functions getFrequency/setFrequency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-loadarchive">Function loadArchive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getarchivepath">Function getArchivePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocation">Function getLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-makeroute">Function makeRoute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#usage-example">Usage Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-locationloader">Class LocationLoader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocationdir">Function getLocationDir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocationfile">Function getLocationFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getlocalversion">Function getLocalVersion</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#function-startlocationloader">Function startLocationLoader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-checklocationloader">Function checkLocationLoader</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#function-stoplocationloader">Function stopLocationLoader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-startlocationuploader">Function startLocationUploader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-checklocationuploader">Function checkLocationUploader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-stoplocationuploader">Function stopLocationUploader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id1">Usage Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-location">Class Location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#public-fields">Public fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#constructors">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getsublocation">Function getSubLocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id2">Public Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id3">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getsvgimage">Function getSvgImage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getpngimage">Function getPngImage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getjpgimage">Function getJpgImage()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getpicture">Function getPicture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getbitmap">Function getBitmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#function-getgpscoordinates">Function getGpsCoordinates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-deviceinfo">Class DeviceInfo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id4">Public Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id5">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#class-locationpoint">Class LocationPoint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id6">Public Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="da_using_android_sdk.html#id7">Constructors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#push-notifications">Push Notifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="da_using_android_sdk.html#androidmanifest">AndroidManifest</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Using Navigine SDK for iOS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#structure-initialization">Structure Initialization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#before-you-begin">Before You Begin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-settings">Default Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-settings">Custom Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation">Navigation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#structure-navigationresults">Structure NavigationResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-downloadcontent-location-forcereload-successblock-failblock">Function downloadContent: location: forceReload:successBlock:failBlock:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-startnavigine">Function startNavigine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-stopnavigine">Function stopNavigine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-startlocationloader">Function startLocationLoader:::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-hecklocationloader">Function сheckLocationLoader:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-stoplocationloader">Function stopLocationLoader:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-loadarchive">Function loadArchive:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-getnavigationresults">Function getNavigationResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-localtogps">Function localToGps::::::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-of-usage">Example of Usage:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#making-route">Making Route</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#class-vertex">Class Vertex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-makeroute">Function makeRoute::::::</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#location">Location</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#function-getlocationid">Function getLocationId:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-getsublocdictionary">Function getSublocDictionary:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-getcurrentversion">Function getCurrentVersion:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#images">Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#function-getsvgimagebyindex-getpngimagebyindex">Function getSVGImageByIndex:: / getPNGImageByIndex::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions-getsvgimagebyid-getpngimagebyid">Function’s getSVGImageById:: / getPNGImageById::</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions-getwidthandheight-byindex">Function’s getWidthAndHeight:ByIndex:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions-getwidthandheight-byid">Function’s getWidthAndHeight:ById:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pushes-venues">Pushes &amp; Venues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#class-push">Class Push</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#class-venues">Class Venues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#protocol-naviginecoredelegate">Protocol NavigineCoreDelegate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-startrangepushes">Function startRangePushes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-didrangepushwithtitle-content-image">Function didRangePushWithTitle: Content: Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-didrangepushwithtitle-content-image-id">Function didRangePushWithTitle: Content: Image: Id:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-startrangevenues">Function startRangeVenues:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-didrangevenues">Function didRangeVenues:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#background-navigation">Background Navigation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#before-starting">Before Starting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function-navigationresultsinbackground">Function navigationResultsInBackground</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_cms.html">Using the Navigine CMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uc_home.html">Home Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_locations.html">Locations Tab</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="uc_locations.html#layers">Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uc_locations.html#editing-tool">Editing Tool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="uc_marketing.html">Marketing Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_versions.html">Versions Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_analytics.html">CMS Analytics Tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uc_logs.html">Logs Tab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_using_demos.html">Using Demo Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ud_android_demo.html">Using Demo App for Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ud_ios_demo.html">Using Demo App for iOS</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Navigine - User Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="1_developing_app.html">Developing the Navigation App</a> &raquo;</li>
+      
+    <li>Using Navigine SDK for iOS</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-navigine-sdk-for-ios">
+<h1>Using Navigine SDK for iOS<a class="headerlink" href="#using-navigine-sdk-for-ios" title="Permalink to this headline">¶</a></h1>
+<p>The following is the Navigine&#8217;s SDK for iOS API Reference.</p>
+<div class="section" id="structure-initialization">
+<h2>Structure Initialization<a class="headerlink" href="#structure-initialization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="before-you-begin">
+<h3>Before You Begin<a class="headerlink" href="#before-you-begin" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Add to your Info.plist file empty string “NSLocationAlwaysUsageDescription”.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Add to your Build Phases:</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>libz.dylib</li>
+<li>libc++.dylib</li>
+<li>Uikit.framework</li>
+<li>CoreBluetooth.framework</li>
+<li>CoreLocation.framework</li>
+</ul>
+</div></blockquote>
+<ul class="last">
+<li><dl class="first docutils">
+<dt>CoreMotion.framework</dt>
+<dd><ul class="first last simple">
+<li>Foundation.framework</li>
+<li>MobileCoreServices.framework</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="default-settings">
+<h3>Default Settings<a class="headerlink" href="#default-settings" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">[[</span><span class="n">NavigineCore</span> <span class="n">alloc</span><span class="o">]</span> <span class="n">init</span><span class="o">];</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-settings">
+<h3>Custom Settings<a class="headerlink" href="#custom-settings" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Java"><div class="highlight"><pre>[[NavigineCore alloc] initWithUUIDString: @&quot;AAAAAAAA-BBBB-CCCC-1111-222222222222&quot;];
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="navigation">
+<h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="structure-navigationresults">
+<h3>Structure NavigationResults<a class="headerlink" href="#structure-navigationresults" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Java"><div class="highlight"><pre>typedef struct \_NavigationResults
+{
+             int outLocation;
+             int outSubLocation;
+             double X;
+             double Y;
+             double Z;
+             double Yaw;
+             *int ErrorCode;
+}NavigationResults;
+</pre></div>
+</div>
+<p><strong>Fields:</strong></p>
+<ul class="simple">
+<li><em>outLocation</em> – location id of your position.</li>
+<li><em>outSubLocation</em> – sublocation id of your position.</li>
+<li><em>X</em> – X coordinate of your position(m).</li>
+<li><em>Y</em> – Y coordinate of your position (m).</li>
+<li><em>Yaw</em> – yaw angle(radians).</li>
+<li><em>ErrorCode</em> – error code. If 0 – all is good.</li>
+</ul>
+</div>
+<div class="section" id="function-downloadcontent-location-forcereload-successblock-failblock">
+<h3>Function downloadContent: location: forceReload:successBlock:failBlock:<a class="headerlink" href="#function-downloadcontent-location-forcereload-successblock-failblock" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for downloading content from server and starting navigation. Attention: downloading process in background!</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (void) downloadContent :(NSString \*)userHash
+                location :(NSString \*)location
+             forceReload :(BOOL) forced
+            processBlock :(void(^)(NSInteger loadProcess))processBlock
+            successBlock :(void(^)(NSString \*success))successBlock
+               failBlock :(void(^)(NSString \*error))failBlock;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>userID</em> - userID ID from web site.</li>
+<li><em>location</em> - location location name from web site.</li>
+<li><em>forced</em> — the boolean flag. If set, the content data would be loaded even if the same version has been downloaded already earlier. If flag is not set, the download process compares the current downloaded version with the last version on the server. If server version equals to the current downloaded version, the re-downloading is not done.</li>
+<li><em>loadProcess</em> – values in interval [0, 99] mean that download is in progress. Value 100 means that download has been successfully finished.</li>
+<li><em>success</em> – string, that speaks of a successful upload and start navigation.</li>
+<li><em>error</em> — description if download process is impossible.</li>
+</ul>
+</div>
+<div class="section" id="function-startnavigine">
+<h3>Function startNavigine<a class="headerlink" href="#function-startnavigine" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for starting Navigine service.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="kt">void</span><span class="o">)</span> <span class="n">startNavigine</span><span class="o">;*</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-stopnavigine">
+<h3>Function stopNavigine<a class="headerlink" href="#function-stopnavigine" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for forced termination of Navigine service. (Throws exception if the navigation is not possible on device).</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="kt">void</span><span class="o">)</span> <span class="n">stopNavigine</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-startlocationloader">
+<h3>Function startLocationLoader:::<a class="headerlink" href="#function-startlocationloader" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for creating a content download process from the server. Download is done in a separate thread in the non-blocking mode. Function startLocationLoader doesn&#8217;t wait until download is finished and returns immediately.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- - (int)startLocationLoader :(NSString \*)userID:(NSString\*)location:(BOOL)forced
+</pre></div>
+</div>
+<ul class="simple">
+<li><em>userID</em> - userID ID from web site.</li>
+<li><em>location</em> - location location name from web site.</li>
+<li><em>forced</em> — the boolean flag. If set, the content data would be loaded even if the same version has been downloaded already earlier. If flag is not set, the download process compares the current downloaded version with the last version on the server. If server version equals to the current downloaded version, the re-downloading is not done.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>Integer number - download process identifier. This number is used further for checking the download process state and for download process terminating.</p>
+</div>
+<div class="section" id="function-hecklocationloader">
+<h3>Function сheckLocationLoader:<a class="headerlink" href="#function-hecklocationloader" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for checking the download process state and progress.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">сheckLocationLoader</span><span class="o">:</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">loaderId</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>loaderId</em> - download process identifier.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>Integer number — the download process state:</p>
+<ul class="simple">
+<li>values in interval [0, 99] mean that download is in progress. In that case the value shows the download progress percentage.</li>
+<li>value 100 means that download has been successfully finished.</li>
+<li>other values mean that download process is impossible for some reason.</li>
+</ul>
+</div>
+<div class="section" id="function-stoplocationloader">
+<h3>Function stopLocationLoader:<a class="headerlink" href="#function-stoplocationloader" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for forced termination of download process, which has been started earlier. Function should be called when download process is finished (successfully or not) or by a timeout.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="kt">void</span><span class="o">)</span> <span class="n">stopLocationLoader</span> <span class="o">:(</span><span class="kt">int</span><span class="o">)</span><span class="n">loaderId</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Params</strong></p>
+<ul class="simple">
+<li><em>loaderId</em> - download process identifier.</li>
+</ul>
+</div>
+<div class="section" id="function-loadarchive">
+<h3>Function loadArchive:<a class="headerlink" href="#function-loadarchive" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for loading a location archive to the Navigation library.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (bool) loadArchive :(NSString \*)location;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>location</em> - location location name from web site.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<ul class="simple">
+<li><em>true</em>, if archive was loaded successfully.</li>
+<li><em>false</em>, if archive can&#8217;t be loaded (e.g. invalid archive file).</li>
+</ul>
+</div>
+<div class="section" id="function-getnavigationresults">
+<h3>Function getNavigationResults<a class="headerlink" href="#function-getnavigationresults" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting result of navigation</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="n">NavigationResults</span><span class="o">)</span> <span class="n">getNavigationResults</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Return value:</strong></p>
+<ul class="simple">
+<li>structure NavigationResults.</li>
+</ul>
+</div>
+<div class="section" id="function-localtogps">
+<h3>Function localToGps::::::<a class="headerlink" href="#function-localtogps" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for converting local coordinates to GPS coordinates</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (void) localToGps: (float) x :(float) y :(float) azimuth:(double) latitude :(double)longitude :(double\*) data;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>x</em> – x-coordinate.</li>
+<li><em>y</em> – y-coordinate.</li>
+<li>azimuth – sublocation azimuth</li>
+<li>latitude – sublocation latitude</li>
+<li>longitude – sublocation longitude</li>
+<li>data – GPS coordinates</li>
+</ul>
+</div>
+<div class="section" id="example-of-usage">
+<h3>Example of Usage:<a class="headerlink" href="#example-of-usage" title="Permalink to this headline">¶</a></h3>
+<p><strong>1. Simple usage</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>\_navigineCore = [[NavigineCore alloc] init];
+[\_ navigineCore downloadContent:@&quot;1234-1234-1234-1234&quot;
+                        location:@&quot;navigine&quot;
+                     forceReload:NO
+                    processBlock:^(NSInteger loadProcess) {
+            NSLog(@&quot;Load process: %zd&quot;,loadProcess);
+                  } successBlock:^(NSString \*success) {
+                        NSlog(@”SUCCESS!”)
+                     } failBlock:^(NSString \*error) {
+                       if(error) NSLog(@&quot;ERROR %@&quot;,error);
+                     }];*
+</pre></div>
+</div>
+<p><strong>2. Expert usage</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>\_navigineCore = [[NavigineCore alloc] init];
+
+int \_loaderID = [\_navigineCore startLocationLoader :@&quot;1234-1234-1234-1234&quot; :@ &quot;navigine&quot; :NO];
+int loadProcess = 0;
+loadProcess = [\_navigineCore checkLocationLoader :\_loaderID];
+while (loadProcess &lt; 100){
+  loadProcess = [\_navigineCore checkLocationLoader :\_loaderID];
+  if(loadProcess == 255) {
+      [\_navigineCore stopLocationLoader];
+      return;
+  }
+}
+[\_navigineCore stopLocationLoader];
+[\_navigineCore loadArchive:@”navigine”];
+@try {
+ [\_navigineCore startNavigine];
+ }
+@catch (NSException \*exception) {
+ NSLog(@&quot;Exception caught: reason: %@&quot;,exception.description);
+}
+@finally {
+NSLog(@&quot;Finally&quot;);
+}
+NavigationResults res=[\_navigineCore getNavigationResults];
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="making-route">
+<h2>Making Route<a class="headerlink" href="#making-route" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-vertex">
+<h3>Class Vertex<a class="headerlink" href="#class-vertex" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Java"><div class="highlight"><pre><span class="nd">@interface</span> <span class="n">Vertex</span> <span class="o">:</span> <span class="n">NSObject</span><span class="o">{}</span>
+<span class="nd">@property</span> <span class="o">(</span><span class="n">assign</span><span class="o">,</span><span class="n">nonatomic</span><span class="o">)</span> <span class="kt">int</span> <span class="n">subLocation</span><span class="o">;</span>
+<span class="nd">@property</span> <span class="o">(</span><span class="n">assign</span><span class="o">,</span><span class="n">nonatomic</span><span class="o">)</span> <span class="kt">double</span> <span class="n">x</span><span class="o">;</span>
+<span class="nd">@property</span> <span class="o">(</span><span class="n">assign</span><span class="o">,</span><span class="n">nonatomic</span><span class="o">)</span> <span class="kt">double</span> <span class="n">y</span><span class="o">;</span>
+<span class="nd">@end</span>
+</pre></div>
+</div>
+<p><strong>Fields:</strong></p>
+<ul class="simple">
+<li><em>subLocation</em> – sublocation id of vertex<em>. x</em> – X coordinate of vertex (m).</li>
+<li><em>y</em> – Y coordinate of vertex (m).</li>
+</ul>
+</div>
+<div class="section" id="function-makeroute">
+<h3>Function makeRoute::::::<a class="headerlink" href="#function-makeroute" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for making route from one position to other.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (NSArray\*) makeRoute :(int)id1 :(double)x1 :(double)y1 :(int)id2:(double)x2*:(double)y2;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>id{1,2}</em> – sublocation id of start or finish point.</li>
+<li><em>x{1,2}</em> – X coordinate of start or finish point.</li>
+<li><em>y{1,2}</em> – Y coordinate of start or finish point.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>NSArray object – array with Vertex structures.</p>
+<p>Example of Usage:</p>
+<div class="highlight-Java"><div class="highlight"><pre>NSString \*path = [\_navigineCore makeRoute :1234 :0.0 :0.0 :1234:100.0 :100.0];
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="location">
+<h2>Location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="function-getlocationid">
+<h3>Function getLocationId:<a class="headerlink" href="#function-getlocationid" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting current location id</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>-(int) getLocationId:(NSInteger \*)id;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>id</em> – current sublocation id.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>error (0 if ok).</p>
+</div>
+<div class="section" id="function-getsublocdictionary">
+<h3>Function getSublocDictionary:<a class="headerlink" href="#function-getsublocdictionary" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting &#8220;index&#8221;-&gt;&#8221;id&#8221; sublocation dictionary</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (int) getSublocDictionary:(NSDictionary \*\*)sublocDictionary;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>sublocDictionary</em> - sublocation dictionary.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>error (0 if ok).</p>
+</div>
+<div class="section" id="function-getcurrentversion">
+<h3>Function getCurrentVersion:<a class="headerlink" href="#function-getcurrentversion" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting current location version</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (int) getCurrentVersion:(NSInteger \*)currentVersion;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>currentVersion</em> - current location version.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>error (0 if ok).</p>
+</div>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="function-getsvgimagebyindex-getpngimagebyindex">
+<h3>Function getSVGImageByIndex:: / getPNGImageByIndex::<a class="headerlink" href="#function-getsvgimagebyindex-getpngimagebyindex" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting image from zip (SVG, PNG)</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (int) getSVGImageByIndex :(NSInteger)index :(NSData \*\*)imData;
+- (int) getPNGImageByIndex :(NSInteger)index :(NSData \*\*)imData;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>index</em> - the ordinal sublocation in admin panel.</li>
+<li><em>imData</em> - image data.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>error (0 if ok).</p>
+</div>
+<div class="section" id="functions-getsvgimagebyid-getpngimagebyid">
+<h3>Function’s getSVGImageById:: / getPNGImageById::<a class="headerlink" href="#functions-getsvgimagebyid-getpngimagebyid" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting image from zip (SVG, PNG)</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (int) getSVGImageById :(NSInteger)id :(NSData \*\*)imData;
+- (int) getPNGImageById :(NSInteger)id :(NSData \*\*)imData;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>id</em> - sublocation id.</li>
+<li><em>imData</em> image data</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>error (0 if ok).</p>
+</div>
+<div class="section" id="functions-getwidthandheight-byindex">
+<h3>Function’s getWidthAndHeight:ByIndex:<a class="headerlink" href="#functions-getwidthandheight-byindex" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting width and height of image</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (int)getWidthAndHeight: (double\*)width :(double\*)height byIndex:(NSInteger)index;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>width</em> – image width</li>
+<li><em>height</em> – image height</li>
+<li><em>index</em> - the ordinal sublocation in admin panel.</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>error (0 if ok).</p>
+</div>
+<div class="section" id="functions-getwidthandheight-byid">
+<h3>Function’s getWidthAndHeight:ById:<a class="headerlink" href="#functions-getwidthandheight-byid" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting width and height of image</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (int)getWidthAndHeight: (double\*)width :(double\*)heightbyIndex:(NSInteger)id;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>width</em> – image width</li>
+<li><em>height</em> – image height</li>
+<li><em>id</em> –image sublocation id</li>
+</ul>
+<p><strong>Return value:</strong></p>
+<p>error (0 if ok).</p>
+</div>
+</div>
+<div class="section" id="pushes-venues">
+<h2>Pushes &amp; Venues<a class="headerlink" href="#pushes-venues" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-push">
+<h3>Class Push<a class="headerlink" href="#class-push" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Java"><div class="highlight"><pre>@interface Push : NSObject{}
+@property(nonatomic, strong) NSString \*pushTitle;
+@property(nonatomic, strong) NSString \*pushContent;
+@property(nonatomic, strong) NSString \*pushImage;
+@end
+</pre></div>
+</div>
+<p><strong>Fields:</strong></p>
+<ul class="simple">
+<li><em>pushTitle</em> - title of push. <em>pushContent</em> - content of push.</li>
+<li><em>pushImage</em> - url path to image of push.</li>
+</ul>
+</div>
+<div class="section" id="class-venues">
+<h3>Class Venues<a class="headerlink" href="#class-venues" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-Java"><div class="highlight"><pre>@interface Venue : NSObject{}
+@property(nonatomic, strong) NSString \*name;
+@property(nonatomic, strong) NSString \*realX;
+@property(nonatomic, strong) NSString \*realY;
+@property(nonatomic, strong) NSString \*image;
+@property(nonatomic, strong) NSString \*phone;
+@property(nonatomic, strong) NSString \*descript;
+@end
+</pre></div>
+</div>
+<p><strong>Fields:</strong></p>
+<ul class="simple">
+<li><em>name</em> - name of venue.</li>
+<li><em>realX</em> - X coordinate of venue (m).</li>
+<li><em>realY</em> - Y coordinate of venue (m).</li>
+<li><em>image</em> - url path to image of venue content.</li>
+<li><em>phone</em> - phone number of venue.</li>
+<li><em>descript</em> - other info about venue.</li>
+</ul>
+</div>
+<div class="section" id="protocol-naviginecoredelegate">
+<h3>Protocol NavigineCoreDelegate<a class="headerlink" href="#protocol-naviginecoredelegate" title="Permalink to this headline">¶</a></h3>
+<p>Delegate for NavigineCore.</p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="nd">@protocol</span> <span class="n">NavigineCoreDelegate</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-startrangepushes">
+<h3>Function startRangePushes<a class="headerlink" href="#function-startrangepushes" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for checking pushes from web site.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="kt">void</span><span class="o">)</span> <span class="n">startRangePushes</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-didrangepushwithtitle-content-image">
+<h3>Function didRangePushWithTitle: Content: Image<a class="headerlink" href="#function-didrangepushwithtitle-content-image" title="Permalink to this headline">¶</a></h3>
+<p>Tells the delegate that push in range. Function is called by the timeout of the web site.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (void) didRangePushWithTitle :(NSString \*)title Content :(NSString \*)content Image :(NSString \*)image;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>pushTitle</em> - title of push.</li>
+<li><em>pushContent</em> - content of push.</li>
+<li><em>pushImage</em> - url path to image of push.</li>
+</ul>
+</div>
+<div class="section" id="function-didrangepushwithtitle-content-image-id">
+<h3>Function didRangePushWithTitle: Content: Image: Id:<a class="headerlink" href="#function-didrangepushwithtitle-content-image-id" title="Permalink to this headline">¶</a></h3>
+<p>Tells the delegate that push in range. Function is called by the timeout of the web site.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (void) didRangePushWithTitle :(NSString \*)title Content :(NSString \*)content Image :(NSString \*)image Id:(NSInteger) id;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>pushTitle</em> - title of push.</li>
+<li><em>pushContent</em> - content of push.</li>
+<li><em>pushImage</em> - url path to image of push.</li>
+<li><em>id – push id</em></li>
+</ul>
+</div>
+<div class="section" id="function-startrangevenues">
+<h3>Function startRangeVenues:<a class="headerlink" href="#function-startrangevenues" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for checking venues from web site.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="kt">void</span><span class="o">)</span> <span class="n">startRangeVenues</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-didrangevenues">
+<h3>Function didRangeVenues:<a class="headerlink" href="#function-didrangevenues" title="Permalink to this headline">¶</a></h3>
+<p>Tells the delegate that venue in range.</p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre>- (void) didRangeVenues :(NSArray \*)venues;
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li>NSArray object – array with Venue structures.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="background-navigation">
+<h2>Background Navigation<a class="headerlink" href="#background-navigation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="before-starting">
+<h3>Before Starting<a class="headerlink" href="#before-starting" title="Permalink to this headline">¶</a></h3>
+<p>Select “Your target” -&gt; “Capabilities” -&gt; enable “Background mode” -&gt; “Location updates” and “Uses Bluetooth LE accessories”</p>
+</div>
+<div class="section" id="function-navigationresultsinbackground">
+<h3>Function navigationResultsInBackground<a class="headerlink" href="#function-navigationresultsinbackground" title="Permalink to this headline">¶</a></h3>
+<p>Function is used for getting result of navigation when app in background or app not running. If application is in the background function is called once per second.</p>
+<p>If application not run function is called by OS signal.</p>
+<p>But there are a couple of caveats:</p>
+<ul class="simple">
+<li>Your app launches into the background only for a few seconds.</li>
+<li>iOS can take its own sweet time to decide you entered a CLBeaconRegion. I have seen it take up to four minutes.</li>
+</ul>
+<p>More info:
+<a class="reference external" href="http://developer.radiusnetworks.com/2013/11/13/ibeacon-monitoring-in-the-background-and-foreground.html">http://developer.radiusnetworks.com/2013/11/13/ibeacon-monitoring-in-the-background-and-foreground.html</a></p>
+<p><strong>Prototype:</strong></p>
+<div class="highlight-Java"><div class="highlight"><pre><span class="o">-</span> <span class="o">(</span><span class="kt">void</span><span class="o">)</span> <span class="n">navigationResultsInBackground</span> <span class="o">:(</span><span class="n">NavigationResults</span><span class="o">)</span><span class="n">navigationResults</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>Params:</strong></p>
+<ul class="simple">
+<li><em>navigationResults</em> - structure NavigationResults.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="da_sdk_error_codes.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="da_using_android_sdk.html" class="btn btn-neutral" title="Using Navigine SDK for Android" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Navigine.
+
+    </p>
+  </div>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
